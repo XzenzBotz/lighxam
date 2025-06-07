@@ -27,10 +27,14 @@
 
     .title {
       text-align: center;
-      font-size: 2.5em;
+      font-size: 2.8em;
       font-weight: bold;
       margin-top: 40px;
       animation: fire 2s infinite alternate;
+      color: #fff;
+      text-shadow: 0 0 10px #ff0000, 0 0 20px #ff6600, 0 0 30px #ff9900;
+      z-index: 10;
+      position: relative;
     }
 
     @keyframes fire {
@@ -130,7 +134,7 @@
     <button onclick="kirimOrder()">Kirim Order via WhatsApp</button>
   </div>
 
-  <a href="https://wa.me/6281234567890" class="wa-btn" target="_blank">
+  <a href="https://wa.me/6283894413409" class="wa-btn" target="_blank">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
     Pesan via WhatsApp
   </a>
@@ -160,7 +164,7 @@
 
       const pesan = `Halo Admin,%0ASaya ingin order:%0A🔗 Link: ${link}%0A📌 Layanan: ${layanan}%0A🔢 Jumlah: ${jumlah}%0A📝 Catatan: ${catatan || '-'}%0A💳 Pembayaran: ${bayar}%0A(Saya akan kirim bukti tf terlampir)`;
 
-      const url = `https://wa.me/6281234567890?text=${encodeURI(pesan)}`;
+      const url = `https://wa.me/6283894413409?text=${encodeURI(pesan)}`;
       window.open(url, '_blank');
     }
   </script>
