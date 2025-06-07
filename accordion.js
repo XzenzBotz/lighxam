@@ -47,6 +47,8 @@ const data = [
   {
     title: "Proses hanya menggunakan link text saluran WhatsApp Tersebut",
     content: 'suntik sosmed di lighxam store 100% asli dan permanent/tidak berkurang😉`
+  },
+  {
 ];
 
 const container = document.getElementById("accordionContainer");
