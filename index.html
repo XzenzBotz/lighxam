@@ -131,10 +131,10 @@
       <option value="Qris">Qris (kena fee 1%)</option>
     </select>
     <input type="file" id="bukti" accept="image/*">
-    <button onclick="kirimOrder()">Kirim Order via WhatsApp</button>
+    <button onclick="kirimOrder()">Kirim & Proses Order</button>
   </div>
 
-  <a href="https://wa.me/6283894413409" class="wa-btn" target="_blank">
+  <a href="#" class="wa-btn">
     <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WA">
     Pesan via WhatsApp
   </a>
@@ -164,11 +164,17 @@
 
       const pesan = `Halo Admin,%0ASaya ingin order:%0A🔗 Link: ${link}%0A📌 Layanan: ${layanan}%0A🔢 Jumlah: ${jumlah}%0A📝 Catatan: ${catatan || '-'}%0A💳 Pembayaran: ${bayar}%0A(Saya akan kirim bukti tf terlampir)`;
 
-      const url = `https://wa.me/6283894413409?text=${encodeURI(pesan)}`;
-      window.open(url, '_blank');
+      const nomor = "6283894413409";
+      const urlWA = `https://wa.me/${nomor}?text=${encodeURI(pesan)}`;
+
+      // Simpan sementara link WA di sessionStorage dan arahkan ke proses.html
+      sessionStorage.setItem("whatsappLink", urlWA);
+      window.location.href = "proses.html";
     }
   </script>
   <script src="accordion.js"></script>
   <script src="script.js"></script>
+</body>
+</html>
 </body>
 </html>
